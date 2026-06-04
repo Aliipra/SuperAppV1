@@ -78,4 +78,496 @@ html, body {
 
 /* SECTIONS */
 .sec-hdr{display:flex;justify-content:space-between;align-items:center;padding:14px 14px 6px}
-.sec-title{font-size:14px;font-weight:700
+.sec-title{font-size:14px;font-weight:700;color:#1a1a2e}
+.sec-more{font-size:11px;color:#1B3FA0;cursor:pointer}
+
+/* SERVICE GRID */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px}
+.svc-card{border-radius:14px;padding:13px;cursor:pointer;min-height:100px;display:flex;flex-direction:column;justify-content:space-between;border:none}
+.svc-ico{font-size:24px;margin-bottom:6px}
+.svc-name{font-size:12px;font-weight:700}
+.svc-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,0.3);display:inline-block;margin-top:4px}
+
+/* ADS BANNER */
+.ads-scroll{display:flex;gap:8px;padding:8px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.ads-scroll::-webkit-scrollbar{display:none}
+.ad-card{flex-shrink:0;width:140px;border-radius:14px;padding:12px;cursor:pointer;border:0.5px solid rgba(0,0,0,0.08)}
+.ad-logo{font-size:28px;margin-bottom:6px}
+.ad-name{font-size:12px;font-weight:700;color:#1a1a2e}
+.ad-btn{background:#1B3FA0;color:#fff;border:none;border-radius:8px;padding:4px 10px;font-size:10px;cursor:pointer;margin-top:6px;font-weight:600}
+
+/* DATA BAR */
+.data-card{background:#fff;border-radius:14px;padding:12px 14px;margin:0 12px 8px;border:0.5px solid #e5e5ea}
+.data-bar-bg{background:#f0f0f5;border-radius:8px;height:8px;overflow:hidden;margin:8px 0 4px}
+.data-fill{height:100%;border-radius:8px;background:#1B3FA0;width:65%}
+.data-info{display:flex;justify-content:space-between;font-size:10px;color:#888}
+
+/* WALLET & TABLES */
+.wallet-actions{display:flex;justify-content:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.w-btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:rgba(255,255,255,0.15);border-radius:12px;padding:8px 14px;cursor:pointer;border:none;color:#fff}
+.w-btn-ico{font-size:18px}
+.w-btn-lbl{font-size:10px}
+.bill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 12px}
+.bill-item{background:#fff;border-radius:12px;padding:10px;text-align:center;cursor:pointer;border:0.5px solid #e5e5ea}
+.bill-ico{font-size:22px;margin-bottom:4px}
+.bill-name{font-size:10px;font-weight:600;color:#1a1a2e}
+.tx-list{padding:0 12px}
+.tx-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:0.5px solid #f0f0f5}
+.tx-circle{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.tx-name{font-size:12px;font-weight:600;color:#1a1a2e}
+.tx-date{font-size:10px;color:#999}
+.tx-amt{font-size:13px;font-weight:700;margin-right:auto}
+.tx-in{color:#0B5E3F}
+.tx-out{color:#dc2626}
+
+/* LINES */
+.line-card{background:#fff;border-radius:14px;padding:14px;margin:0 12px 10px;border:0.5px solid #e5e5ea}
+.stat-row{display:flex;gap:8px;margin-top:10px}
+.stat-box{flex:1;background:#f8f8fc;border-radius:10px;padding:8px;text-align:center}
+.stat-val{font-size:15px;font-weight:700}
+.stat-lbl{font-size:9px;color:#888;margin-top:2px}
+.pkg-item{background:#fff;border-radius:12px;padding:12px 14px;margin:0 12px 8px;border:0.5px solid #e5e5ea;display:flex;align-items:center;gap:10px}
+.pkg-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.pkg-name{font-size:12px;font-weight:700;color:#1a1a2e}
+.pkg-price{font-size:13px;font-weight:700;margin-right:auto}
+
+/* VIDEO & MUSIC */
+.feat-banner{margin:10px 12px;border-radius:16px;overflow:hidden;height:140px;display:flex;align-items:flex-end;padding:12px;position:relative}
+.feat-info{position:relative;z-index:1;color:#fff}
+.thumb-row{display:flex;gap:8px;padding:4px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.thumb{flex-shrink:0;width:100px;text-align:center}
+.thumb-img{width:100px;height:130px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:36px}
+.np-card{background:#fff;border-radius:18px;padding:14px;margin:10px 12px;border:0.5px solid #e5e5ea;text-align:center}
+.np-art{width:100%;height:110px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:45px;margin-bottom:10px}
+.ringtone-item{background:#fff;border-radius:12px;padding:10px 14px;margin:4px 12px;border:0.5px solid #e5e5ea;display:flex;align-items:center;gap:10px}
+.ring-name{font-size:12px;font-weight:600;color:#1a1a2e;flex:1;text-align:right}
+.ring-btn{background:#0d0d1a;color:#fff;border:none;border-radius:8px;padding:4px 10px;font-size:10px;font-weight:700}
+
+/* REWARDS & LOANS */
+.pts-big-card{background:#fff;border-radius:16px;padding:16px;margin:10px 12px;border:0.5px solid #e5e5ea;text-align:center}
+.pts-circle{width:80px;height:80px;border-radius:50%;background:#fef9c3;border:3px solid #fbbf24;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 10px}
+.pts-big{font-size:24px;font-weight:700;color:#78350f}
+.reward-item{background:#fff;border-radius:12px;padding:12px 14px;margin:4px 12px;border:0.5px solid #e5e5ea;display:flex;align-items:center;gap:10px}
+.reward-name{font-size:12px;font-weight:700;color:#1a1a2e;flex:1;text-align:right}
+.reward-claim{background:#fbbf24;color:#78350f;border:none;border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700}
+.loan-hero{background:#fff;border-radius:16px;padding:16px;margin:10px 12px;border:0.5px solid #e5e5ea;text-align:center}
+.loan-tier{background:#fff;border-radius:12px;padding:12px 14px;margin:4px 12px;border:0.5px solid #e5e5ea;display:flex;align-items:center;gap:10px}
+.loan-name{font-size:12px;font-weight:700;color:#1a1a2e;flex:1;text-align:right}
+.loan-apply{background:#4c1d95;color:#fff;border:none;border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700}
+
+/* GAMES */
+.game-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 12px}
+.game-card{background:#fff;border-radius:14px;padding:13px;border:0.5px solid #e5e5ea;text-align:center}
+.game-ico{font-size:32px;margin-bottom:6px}
+.game-name{font-size:12px;font-weight:700;color:#1a1a2e}
+.game-play-btn{background:#1e1b4b;color:#fff;border:none;border-radius:8px;padding:5px 14px;font-size:10px;margin-top:6px;font-weight:700}
+
+/* SUPPORT & CHAT */
+.chat-area{padding:10px 12px;display:flex;flex-direction:column;gap:8px}
+.msg-bot{background:#fff;border-radius:12px 12px 12px 4px;padding:10px 12px;max-width:75%;border:0.5px solid #e5e5ea;align-self:flex-start}
+.msg-user{background:#1B3FA0;border-radius:12px 12px 4px 12px;padding:10px 12px;max-width:75%;align-self:flex-end}
+.chat-input-row{display:flex;gap:6px;padding:8px 12px;background:#fff;border-top:0.5px solid #e5e5ea;flex-shrink:0}
+.chat-input{flex:1;border:0.5px solid #e5e5ea;border-radius:20px;padding:7px 12px;font-size:13px;outline:none}
+.chat-send{background:#1B3FA0;border:none;border-radius:50%;width:34px;height:34px;color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center}
+.chat-sub-card{background:#fff;border-radius:14px;padding:14px;margin:10px 12px;border:0.5px solid #e5e5ea}
+.chat-friend-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:0.5px solid #f0f0f5}
+.friend-name{font-size:13px;font-weight:600;color:#1a1a2e;flex:1;text-align:right}
+
+/* THEME SYSTEM (MTN COLORS) */
+:root{
+  --mtn-yellow: #ffbb00;
+  --mtn-black: #111111;
+  --mtn-bg: #fffdf2;
+  --mtn-line: #e8dd9a;
+}
+.wrap{background:var(--mtn-bg)}
+.phone{border:10px solid var(--mtn-black); box-shadow:0 0 0 2px #2b2b2b}
+.screen{background:var(--mtn-bg)}
+.statusbar{background:var(--mtn-black)}
+.statusbar span{color:var(--mtn-yellow)}
+.hdr-blue{background:var(--mtn-yellow); color:var(--mtn-black)}
+.hdr-green{background:var(--mtn-black)}
+.hdr-dark{background:#0d0d0d}
+.hdr-purple{background:#2b2b2b}
+.hdr-gold{background:var(--mtn-yellow); color:var(--mtn-black)}
+.hdr-indigo{background:#1f1f1f}
+.back-btn{background:rgba(17,17,17,0.12); color:var(--mtn-black)}
+.notif-circle{background:rgba(17,17,17,0.12)}
+.notif-dot{background:var(--mtn-black); border:1.5px solid var(--mtn-yellow)}
+.nav-ico.a, .sec-more, .stat-val, .data-fill{ color:var(--mtn-yellow)}
+.nav-i span.a{color:var(--mtn-black)}
+.pill.on{background:var(--mtn-yellow); color:var(--mtn-black); border-color:var(--mtn-yellow)}
+.bal-card, .data-card, .bill-item, .tx-item, .line-card, .pkg-item, .np-card, .ringtone-item, .pts-big-card, .reward-item, .loan-hero, .loan-tier, .game-card, .chat-sub-card { border-color:var(--mtn-line); background:rgba(255,255,255,0.18)}
+.ad-btn, .chat-send, .game-play-btn, .loan-apply, .reward-claim{ background:var(--mtn-yellow); color:var(--mtn-black)}
+.ring-btn{ background:var(--mtn-black); color:var(--mtn-yellow)}
+
+/* تحسينات الشاشات والهواتف الذكية (Mobile-First Constraints) */
+@media (max-width: 480px){
+  html, body {
+    overflow: hidden; /* منع الارتداد التلقائي والمتصفح الخارجي من الاهتزاز */
+    height: 100%;
+  }
+  .wrap{
+    padding:0;
+    gap:0;
+    height: 100vh;
+    justify-content: flex-start;
+  }
+  .phone{
+    width:100%;
+    height:100%;
+    max-width:none;
+    border-radius:0;
+    border-width:0;
+    box-shadow:none;
+    flex:1;
+  }
+  .statusbar{
+    padding-top: max(10px, env(safe-area-inset-top));
+  }
+  .scr-body {
+    padding-bottom: calc(15px + env(safe-area-inset-bottom));
+  }
+  .bot-nav {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+  .pill-row {
+    width: 100%;
+    background: #fffdf2;
+    padding: 10px 10px 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    flex-shrink: 0;
+  }
+  .pill-row::-webkit-scrollbar { display:none }
+  .pill {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid var(--mtn-line);
+    background: #fff;
+  }
+}
+
+@media (max-width: 420px){
+  .bal-amt{font-size:22px}
+  .qa-lbl{font-size:9px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="pill-row">
+    <button class="pill on" id="tpill-home" onclick="goScreen('home')">🏠 الرئيسية</button>
+    <button class="pill" id="tpill-wallet" onclick="goScreen('wallet')">💳 المحفظة</button>
+    <button class="pill" id="tpill-lines" onclick="goScreen('lines')">📱 رقمي</button>
+    <button class="pill" id="tpill-video" onclick="goScreen('video')">🎬 فيديو</button>
+    <button class="pill" id="tpill-music" onclick="goScreen('music')">🎵 موسيقى</button>
+    <button class="pill" id="tpill-rewards" onclick="goScreen('rewards')">⭐ المكافآت</button>
+    <button class="pill" id="tpill-loans" onclick="goScreen('loans')">🏦 القروض</button>
+    <button class="pill" id="tpill-games" onclick="goScreen('games')">🎮 الألعاب</button>
+    <button class="pill" id="tpill-support" onclick="goScreen('support')">🎧 الدعم</button>
+    <button class="pill" id="tpill-chat" onclick="goScreen('chat')">💬 المحادثة</button>
+  </div>
+
+  <div class="phone">
+    <div class="statusbar">
+      <span>9:41</span>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span>📶</span><span>🔋</span>
+      </div>
+    </div>
+
+    <div class="screen on" id="scr-home">
+      <div class="hdr hdr-blue">
+        <div class="hdr-row">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:32px;height:32px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#1B3FA0">سر</div>
+            <div><div style="font-size:15px;font-weight:700">MTN</div><div style="font-size:10px;opacity:.7">Super App</div></div>
+          </div>
+          <div class="notif-circle">🔔<div class="notif-dot"></div></div>
+        </div>
+        <div class="bal-card">
+          <div class="bal-lbl">رصيد المحفظة</div>
+          <div class="bal-row">
+            <div><div class="bal-amt">48,500</div><div class="bal-cur">ل.س</div></div>
+            <div class="phone-badge">📱 0933 456 789</div>
+          </div>
+        </div>
+        <div class="pts-bar" onclick="goScreen('rewards')" style="cursor:pointer">
+          <div><div class="pts-left">نقاطي</div><div class="pts-val">750 ⭐</div></div>
+          <div><div class="pts-right">للقرض: 1000 نقطة</div><div class="pts-prog-bg"><div class="pts-prog-fill" style="width:75%"></div></div></div>
+        </div>
+      </div>
+      
+      <div class="scr-body">
+        <div class="qa-row">
+          <div class="qa-item" onclick="goScreen('wallet')"><div class="qa-icon" style="background:#E6F0FF">💳</div><div class="qa-lbl">المحفظة</div></div>
+          <div class="qa-item" onclick="goScreen('wallet')"><div class="qa-icon" style="background:#E8F5E9">🧾</div><div class="qa-lbl">الفواتير</div></div>
+          <div class="qa-item" onclick="goScreen('lines')"><div class="qa-icon" style="background:#F3E8FF">📦</div><div class="qa-lbl">الباقات</div></div>
+          <div class="qa-item" onclick="goScreen('rewards')"><div class="qa-icon" style="background:#FEF9C3">⭐</div><div class="qa-lbl">مكافآت</div></div>
+        </div>
+        <div class="qa-row" style="padding-top:2px">
+          <div class="qa-item" onclick="goScreen('games')"><div class="qa-icon" style="background:#e0e7ff">🎮</div><div class="qa-lbl">الألعاب</div></div>
+          <div class="qa-item" onclick="goScreen('loans')"><div class="qa-icon" style="background:#f0fdf4">🏦</div><div class="qa-lbl">القروض</div></div>
+          <div class="qa-item" onclick="goScreen('support')"><div class="qa-icon" style="background:#fff7ed">🎧</div><div class="qa-lbl">الدعم</div></div>
+          <div class="qa-item" onclick="goScreen('chat')"><div class="qa-icon" style="background:#fce7f3">💬</div><div class="qa-lbl">محادثة</div></div>
+        </div>
+        
+        <div class="sec-hdr"><div class="sec-title">استهلاك الإنترنت</div><div class="sec-more" onclick="goScreen('lines')">التفاصيل</div></div>
+        <div class="data-card">
+          <div style="display:flex;justify-content:space-between"><span style="font-size:12px;font-weight:600">باقة الأعمال 20GB</span><span style="font-size:11px;color:#1B3FA0;cursor:pointer" onclick="goScreen('lines')">تجديد</span></div>
+          <div class="data-bar-bg"><div class="data-fill"></div></div>
+          <div class="data-info"><span>مستخدم: 13 GB</span><span>متبقي: 7 GB</span></div>
+        </div>
+        
+        <div class="sec-hdr"><div class="sec-title">خدماتي المفعّلة</div></div>
+        <div class="svc-grid">
+          <div class="svc-card" style="background:#E8F5E9" onclick="goScreen('video')"><div class="svc-ico">🎬</div><div class="svc-name" style="color:#085041">منصة الفيديو</div><div class="svc-badge" style="color:#064e3b">نشط</div></div>
+          <div class="svc-card" style="background:#75bd86" onclick="goScreen('music')"><div class="svc-ico">🎵</div><div class="svc-name" style="color:#fff">الموسيقى</div><div class="svc-badge">نشط</div></div>
+        </div>
+      </div>
+
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-wallet">
+      <div class="hdr hdr-green">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">المحفظة الإلكترونية</div><div style="width:50px"></div></div>
+        <div style="text-align:center;padding:6px 0"><div style="font-size:32px;font-weight:700">48,500</div><div style="font-size:11px;opacity:.7">ل.س — الرصيد الحالي</div></div>
+        <div class="wallet-actions">
+          <button class="w-btn"><div class="w-btn-ico">⬆️</div><div class="w-btn-lbl">تحويل</div></button>
+          <button class="w-btn"><div class="w-btn-ico">💸</div><div class="w-btn-lbl">شحن</div></button>
+        </div>
+      </div>
+      <div class="scr-body">
+        <div class="sec-hdr"><div class="sec-title">دفع الفواتير الحكومية</div></div>
+        <div class="bill-grid">
+          <div class="bill-item"><div class="bill-ico">⚡</div><div class="bill-name">كهرباء</div></div>
+          <div class="bill-item"><div class="bill-ico">💧</div><div class="bill-name">مياه</div></div>
+          <div class="bill-item"><div class="bill-ico">📡</div><div class="bill-name">إنترنت</div></div>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">آخر المعاملات</div></div>
+        <div class="tx-list">
+          <div class="tx-item"><div class="tx-circle" style="background:#E6F0FF">📦</div><div><div class="tx-name">شراء باقة 20GB</div><div class="tx-date">اليوم 10:30</div></div><div class="tx-amt tx-out">- 5,000 ل.س</div></div>
+          <div class="tx-item"><div class="tx-circle" style="background:#E8F5E9">💳</div><div><div class="tx-name">شحن من المصرف</div><div class="tx-date">أمس 4:15</div></div><div class="tx-amt tx-in">+ 20,000 ل.س</div></div>
+        </div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico">🏠</div><span>الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico a">💳</div><span class="a">محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-lines">
+      <div class="hdr hdr-dark">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">إدارة خطي</div><div style="width:50px"></div></div>
+        <div style="font-size:14px; text-align:center">رقم الهاتف: 0933 456 789</div>
+      </div>
+      <div class="scr-body">
+        <div class="line-card">
+          <div class="sec-title">الرصيد المتبقي للباقات</div>
+          <div class="stat-row">
+            <div class="stat-box"><div class="stat-val">7.2 GB</div><div class="stat-lbl">الإنترنت</div></div>
+            <div class="stat-box"><div class="stat-val">120 دقيقة</div><div class="stat-lbl">دقائق محلية</div></div>
+          </div>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">الباقات الموصى بها</div></div>
+        <div class="pkg-item"><div class="pkg-icon" style="background:#fae8ff">🎁</div><div><div class="pkg-name">باقة صبايا الشهرية</div></div><div class="pkg-price">12,000 ل.س</div></div>
+        <div class="pkg-item"><div class="pkg-icon" style="background:#ffedd5">⚡</div><div><div class="pkg-name">باقة توربو فائقة السرعة</div></div><div class="pkg-price">18,500 ل.س</div></div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico">🏠</div><span>الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico a">📱</div><span class="a">رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-video">
+      <div class="hdr hdr-purple">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">منصة الفيديو والشاشات</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="feat-banner" style="background:#311b92">
+          <div class="feat-info"><h5>فيلم الأسبوع المميز</h5><p style="font-size:11px">مشاهدة مباشرة بدقة عالية بدون استهلاك باقة</p></div>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">تابع الآن</div></div>
+        <div class="thumb-row">
+          <div class="thumb"><div class="thumb-img" style="background:#e1bee7">🍿</div><div class="ad-name">مسلسل درامي</div></div>
+          <div class="thumb"><div class="thumb-img" style="background:#b39ddb">🎬</div><div class="ad-name">فيلم وثائقي</div></div>
+          <div class="thumb"><div class="thumb-img" style="background:#c5cae9">🎥</div><div class="ad-name">برامج أطفال</div></div>
+        </div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-music">
+      <div class="hdr hdr-indigo">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">عالم الموسيقى</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="np-card">
+          <div class="np-art" style="background:#e0f2f1">🎵</div>
+          <div class="ad-name">أغنية النجاح والتفوق</div>
+          <div style="font-size:11px; color:#888">الفنان المفضّل</div>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">رنات الهاتف والسمع</div></div>
+        <div class="ringtone-item"><span style="font-size:18px">🎼</span><div class="ring-name">نغمة فيروز الصباحية</div><button class="ring-btn">تفعيل</button></div>
+        <div class="ringtone-item"><span style="font-size:18px">🎻</span><div class="ring-name">عزف عود كلاسيكي</div><button class="ring-btn">تفعيل</button></div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-rewards">
+      <div class="hdr hdr-gold">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">برنامج المكافآت النجمية</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="pts-big-card">
+          <div class="pts-circle"><div class="pts-big">750</div><div style="font-size:9px">نقطة مجمدة</div></div>
+          <p style="font-size:11px">أنت في المستوى الذهبي المميز حالياً</p>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">استبدل نقاطك بالهدايا</div></div>
+        <div class="reward-item"><span>🎁</span><div class="reward-name">1 GB إنترنت مجاني</div><button class="reward-claim">استبدال بـ 200 ن</button></div>
+        <div class="reward-item"><span>📞</span><div class="reward-name">60 دقيقة مكالمات</div><button class="reward-claim">استبدال بـ 150 ن</button></div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico">🏠</div><span>الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico a">⭐</div><span class="a">مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-loans">
+      <div class="hdr hdr-green">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">قروض الرصيد الفورية</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="loan-hero">
+          <div class="sec-title">طلب قرض رصيد طوارئ</div>
+          <p style="font-size:12px; color:#666; margin-top:6px">يمكنك اقتراض الرصيد وتوفيره بالدفع عند الشحن القادم لخطك بنقاطك وسجل معاملاتك الحالي.</p>
+        </div>
+        <div class="sec-hdr"><div class="sec-title">القروض المتاحة لك</div></div>
+        <div class="loan-tier"><span>💰</span><div class="loan-name">قرض رصيد فوري بقيمة 2,000 ل.س</div><button class="loan-apply">طلب</button></div>
+        <div class="loan-tier"><span>🔥</span><div class="loan-name">قرض باقة إنترنت طوارئ 500MB</div><button class="loan-apply">طلب</button></div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-games">
+      <div class="hdr hdr-indigo">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">تحديات السوبر جيم</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="sec-hdr"><div class="sec-title">العب واكسب هدايا ونقاط فورية</div></div>
+        <div class="game-grid">
+          <div class="game-card"><div class="game-ico">🎯</div><div class="game-name">عجلة الحظ اليومية</div><button class="game-play-btn">العب الآن</button></div>
+          <div class="game-card"><div class="game-ico">🧩</div><div class="game-name">سؤال وجواب الأسبوع</div><button class="game-play-btn">العب الآن</button></div>
+        </div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-support">
+      <div class="hdr hdr-blue">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">مركز الدعم والمساعدة</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="chat-area">
+          <div class="msg-bot"><div style="font-size:12px">مرحباً بك يا علي! كيف يمكننا مساعدتك اليوم في تطبيق MTN الفائق؟</div></div>
+          <div class="msg-user"><div style="font-size:12px; color:#fff">لدي استفسار بخصوص باقة الأعمال وسرعة الخط الفائقة.</div></div>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" class="chat-input" placeholder="اكتب استفسارك هنا...">
+        <button class="chat-send">➡️</button>
+      </div>
+    </div>
+
+    <div class="screen" id="scr-chat">
+      <div class="hdr hdr-purple">
+        <div class="hdr-row"><button class="back-btn" onclick="goScreen('home')">← رجوع</button><div class="hdr-title">غرف المحادثة والاتصال</div><div style="width:50px"></div></div>
+      </div>
+      <div class="scr-body">
+        <div class="chat-sub-card">
+          <div class="chat-friend-row"><span>👤</span><div class="friend-name">مجموعات دعم الأعمال المشتركة</div></div>
+          <div class="chat-friend-row"><span>👤</span><div class="friend-name">إدارة الاشتراكات والخطوط المباشرة</div></div>
+        </div>
+      </div>
+      <div class="bot-nav">
+        <div class="nav-i" onclick="goScreen('home')"><div class="nav-ico a">🏠</div><span class="a">الرئيسية</span></div>
+        <div class="nav-i" onclick="goScreen('lines')"><div class="nav-ico">📱</div><span>رقمي</span></div>
+        <div class="nav-i" onclick="goScreen('wallet')"><div class="nav-ico">💳</div><span>محفظتي</span></div>
+        <div class="nav-i" onclick="goScreen('rewards')"><div class="nav-ico">⭐</div><span>مكافآت</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// الدالة الذكية للتنقل بين التبويبات العلوية والسفلية في نفس الوقت
+function goScreen(screenId) {
+  // إخفاء كافة الشاشات النشطة
+  document.querySelectorAll('.screen').forEach(scr => {
+    scr.classList.remove('on');
+  });
+  
+  // إظهار الشاشة المختارة فوراً
+  const targetScreen = document.getElementById('scr-' + screenId);
+  if (targetScreen) {
+    targetScreen.classList.add('on');
+    // إعادة التمرير لأعلى الصفحة الداخلية عند الانتقال
+    const bodyContainer = targetScreen.querySelector('.scr-body');
+    if(bodyContainer) bodyContainer.scrollTop = 0;
+  }
+
+  // تحديث الأزرار العلوية لتوافق الشاشة الحالية
+  document.querySelectorAll('.pill').forEach(pill => {
+    pill.classList.remove('on');
+  });
+  const targetPill = document.getElementById('tpill-' + screenId);
+  if (targetPill) {
+    targetPill.classList.add('on');
+    // تحريك شريط الحبوب أفقياً ليظهر التبويب المختار تلقائياً في الموبايل
+    targetPill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  }
+}
+</script>
+
+</body>
+</html>
