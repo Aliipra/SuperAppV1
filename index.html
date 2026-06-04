@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#ffcc00">
   <title>MTN Super App Demo</title>
 
@@ -362,13 +362,180 @@ body{margin:0;background:#fffdf2}
   .bot-nav{position:sticky;bottom:0}
 }
 
+
+/* MOBILE-FIRST OVERRIDES */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background: #fffdf2;
+}
+
+body {
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+.wrap{
+  width:100%;
+  min-height:100vh;
+  padding:0;
+  gap:0;
+  align-items:stretch;
+  justify-content:flex-start;
+}
+
+.wrap > h2{
+  position:absolute;
+  left:-9999px;
+}
+
+.wrap > div:first-child{
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #fffdf2;
+  padding: 10px 10px 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  gap: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.wrap > div:first-child::-webkit-scrollbar{display:none}
+
+.pill{
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.phone{
+  width:100%;
+  max-width:none;
+  border-radius:0;
+  border-width:0;
+  box-shadow:none;
+  flex:1;
+  min-height:calc(100vh - 58px);
+}
+
+.statusbar{
+  padding-top: max(10px, env(safe-area-inset-top));
+}
+
+.screen{
+  min-height: calc(100vh - 104px);
+}
+
+.scr-body{
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding-bottom: calc(86px + env(safe-area-inset-bottom));
+}
+
+.bot-nav{
+  position: sticky;
+  bottom: 0;
+  z-index: 25;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+}
+
+.nav-i{
+  min-width: 0;
+  flex: 1;
+}
+
+.nav-ico{
+  font-size: 18px;
+}
+
+.nav-i span{
+  font-size: 9px;
+}
+
+.hdr{
+  padding: 12px 14px 16px;
+}
+
+.hdr-title{
+  font-size: 15px;
+}
+
+.back-btn{
+  padding: 6px 10px;
+}
+
+.qa-row, .svc-grid, .bill-grid, .game-grid, .sticker-grid, .pts-track-row, .stat-row {
+  gap: 8px;
+}
+
+.qa-item, .svc-card, .bill-item, .game-card, .sticker-item, .pkg-item, .reward-item, .loan-tier, .ringtone-item, .tx-item {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qa-icon{
+  width:46px;
+  height:46px;
+}
+
+.ad-card{
+  width: 150px;
+}
+
+.thumb{
+  width: 110px;
+}
+
+.thumb-img{
+  width: 110px;
+  height: 145px;
+}
+
+.np-card, .pts-big-card, .loan-hero, .chat-sub-card, .line-card, .data-card {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.chat-input{
+  font-size: 14px;
+}
+
+.chat-send, .ad-btn, .loan-apply, .reward-claim, .game-play-btn, .ring-btn {
+  min-height: 34px;
+}
+
+/* Make top filter pills usable on mobile */
+.pill-row, .tab-bar {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.pill-row::-webkit-scrollbar,
+.tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* On very small screens, keep the layout compact and readable */
+@media (max-width: 420px){
+  .bal-amt{font-size:24px}
+  .pts-val{font-size:17px}
+  .svc-name,.pkg-name,.loan-name,.reward-name,.friend-name,.tx-name,.bill-name{font-size:11px}
+  .svc-desc,.pkg-det,.loan-det,.reward-pts,.friend-msg,.tx-date,.bill-name{font-size:9px}
+  .qa-lbl{font-size:9px}
+  .screen{min-height:calc(100vh - 96px)}
+}
+
 </style>
 </head>
-<body>
+<body><div class="desktop-note" style="display:none">This is a mobile-first demo.</div>
 <div class="wrap">
 <h2 style="position:absolute;left:-9999px">سوبر آب الاتصالات السورية — نموذج كامل</h2>
 
-<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:600px">
+<div class="pill-row">
   <button class="pill on" id="tpill-home" onclick="goScreen('home')">🏠 الرئيسية</button>
   <button class="pill" id="tpill-wallet" onclick="goScreen('wallet')">💳 المحفظة</button>
   <button class="pill" id="tpill-lines" onclick="goScreen('lines')">📱 رقمي</button>
@@ -382,7 +549,7 @@ body{margin:0;background:#fffdf2}
   <button class="pill" id="tpill-ads" onclick="goScreen('ads')">📢 التطبيقات</button>
 </div>
 
-<div class="phone">
+<div class="phone" style="width:100%;max-width:none;border-radius:0;border-width:0;box-shadow:none;">
   <div class="statusbar">
     <span>9:41</span>
     <div style="display:flex;gap:8px;align-items:center">
