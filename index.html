@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#ffcc00">
   <title>MTN Super App Demo</title>
 
@@ -15,7 +15,7 @@ body,div,span,p,button,input{font-family:'Segoe UI',Tahoma,Arial,sans-serif}
 .statusbar span{color:#fff;font-size:11px;font-weight:600}
 .screen{display:none;flex-direction:column;min-height:700px;background:#f5f5f7}
 .screen.on{display:flex}
-.scr-body{will-change: scroll-position;flex:1;overflow-y:auto;padding-bottom:70px}
+.scr-body{flex:1;overflow-y:auto;padding-bottom:70px}
 .scr-body::-webkit-scrollbar{display:none}
 
 /* NAV */
@@ -373,21 +373,16 @@ html, body {
 body {
   margin: 0;
   -webkit-text-size-adjust: 100%;
-  touch-action: pan-y;
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 
 .wrap{
   width:100%;
-  min-height:100dvh;
+  min-height:100vh;
   padding:0;
   gap:0;
   align-items:stretch;
   justify-content:flex-start;
-  overflow-x:hidden;
 }
 
 .wrap > h2{
@@ -425,8 +420,7 @@ body {
   border-width:0;
   box-shadow:none;
   flex:1;
-  min-height:calc(100dvh - 58px);
-  overflow:hidden;
+  min-height:calc(100vh - 58px);
 }
 
 .statusbar{
@@ -434,14 +428,12 @@ body {
 }
 
 .screen{
-  min-height: calc(100dvh - 104px);
+  min-height: calc(100vh - 104px);
 }
 
-.scr-body{will-change: scroll-position;
+.scr-body{
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
-  overscroll-behavior-x: none;
-  touch-action: pan-y;
+  overscroll-behavior: contain;
   padding-bottom: calc(86px + env(safe-area-inset-bottom));
 }
 
@@ -450,7 +442,6 @@ body {
   bottom: 0;
   z-index: 25;
   padding-bottom: max(10px, env(safe-area-inset-bottom));
-  touch-action: pan-x;
 }
 
 .nav-i{
@@ -520,10 +511,8 @@ body {
 /* Make top filter pills usable on mobile */
 .pill-row, .tab-bar {
   overflow-x: auto;
-  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  touch-action: pan-x;
 }
 .pill-row::-webkit-scrollbar,
 .tab-bar::-webkit-scrollbar {
@@ -532,8 +521,7 @@ body {
 
 /* On very small screens, keep the layout compact and readable */
 @media (max-width: 420px){
-  html, body { overflow-x: hidden; }
-.bal-amt{font-size:24px}
+  .bal-amt{font-size:24px}
   .pts-val{font-size:17px}
   .svc-name,.pkg-name,.loan-name,.reward-name,.friend-name,.tx-name,.bill-name{font-size:11px}
   .svc-desc,.pkg-det,.loan-det,.reward-pts,.friend-msg,.tx-date,.bill-name{font-size:9px}
@@ -547,7 +535,7 @@ body {
 <div class="wrap">
 <h2 style="position:absolute;left:-9999px">سوبر آب الاتصالات السورية — نموذج كامل</h2>
 
-<div class="pill-row" style="position:sticky;top:0;z-index:30;background:#fffdf2;">
+<div class="pill-row">
   <button class="pill on" id="tpill-home" onclick="goScreen('home')">🏠 الرئيسية</button>
   <button class="pill" id="tpill-wallet" onclick="goScreen('wallet')">💳 المحفظة</button>
   <button class="pill" id="tpill-lines" onclick="goScreen('lines')">📱 رقمي</button>
@@ -561,7 +549,7 @@ body {
   <button class="pill" id="tpill-ads" onclick="goScreen('ads')">📢 التطبيقات</button>
 </div>
 
-<div class="phone" style="width:100%;max-width:none;border-radius:0;border-width:0;box-shadow:none;min-height:100dvh;">
+<div class="phone" style="width:100%;max-width:none;border-radius:0;border-width:0;box-shadow:none;">
   <div class="statusbar">
     <span>9:41</span>
     <div style="display:flex;gap:8px;align-items:center">
